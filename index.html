@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="./css/style.css" media="all" />
+    <title>ポートフォリオ</title>
+</head>
+
+<body>
+    <!-- ローディング画面 -->
+    <div class="loading">
+        <p class="loading-text">Loading...</p>
+        <div class="spinner"></div>
+    </div>
+    <header>
+        <nav class="nav-right">
+            <ul class="nav-list">
+                <li><a href="profile.html">私について</a></li>
+                <li><a href="experience.html">経験した案件</a></li>
+                <li><a href="skill.html">グラフで見るスキル</a></li>
+                <li><a href="last.html">最後に</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="overlay-elements">
+            <img src="./images/DSC01792.jpg" alt="公園の野良猫が座っている写真" class="img-full" loading="lazy">
+            <div class="text-position fadein">
+                <h1 class="caption">初めに</h1>
+                <p class="mainText">このサイトでは私がエンジニアとして経験してきたことをまとめています。</br>
+                    つたない説明になるかもしれませんが、どうぞお付き合いください。</br>
+                    猫が案内してくれます。
+                </p>
+            </div>
+            <button type=“button” onclick="location.href='file:///C:/Users/moogl/Desktop/kotono/portfolio/profile.html'"
+                class="nuxtButton-position fadein">Nuxt</button>
+        </div>
+    </main>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
