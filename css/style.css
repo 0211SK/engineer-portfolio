@@ -4,6 +4,12 @@
     height: auto;
 }
 
+/* ヘッダーが fixed のためコンテンツが隠れないよう余白を追加 */
+main {
+    /* header の高さに合わせる */
+    padding-top: 100px;
+}
+
 .nav-list {
     display: flex;
     /* 要素間のスペースを均等に配置 */
@@ -91,6 +97,46 @@ header {
     position: absolute;
     right: 30px;
     bottom: 20px;
+    /* 固定する */
+    position: fixed;
+}
+
+.profileText {
+    display: flex;
+}
+
+.profileText-position {
+    height: 2000px;
+    /* 要素間のスペースを縦に均等に配置 */
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+}
+
+.profileText-position2 {
+    padding-top: 250px;
+    width: 100%;
+    height: 1500px;
+    /* 要素間のスペースを縦に均等に配置 */
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    /* 右に寄せる */
+    align-items: flex-end;
+}
+
+.profileText-position-right {
+    /* 背景色を設定 */
+    background-color: rgba(255, 231, 183, 0.543);
+    /* 余白を追加 */
+    padding: 10px;
+}
+
+.profileText-position-left {
+    /* 背景色を設定 */
+    background-color: rgba(255, 183, 193, 0.543);
+    /* 余白を追加 */
+    padding: 10px;
 }
 
 /* フェードインアニメーション用のスタイル */
@@ -113,7 +159,7 @@ header {
 /* ローディング画面のスタイル */
 .loading {
     /*ローディング画面の縦横幅を画面いっぱいになるように指定*/
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     /*ローディング画面の表示位置を固定*/
     position: fixed;
@@ -175,4 +221,9 @@ header {
 
 .content-text {
     color: #333;
+}
+
+/* 画面全体の背景を設定 */
+body {
+    background-color: #b2ff8c;
 }
