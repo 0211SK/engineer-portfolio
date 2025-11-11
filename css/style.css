@@ -4,6 +4,20 @@
     height: auto;
 }
 
+.img-small {
+    /* 画像の幅を50%に設定し、高さは自動調整 */
+    width: 30%;
+    height: auto;
+    padding-left: 50px;
+}
+
+.img-small2 {
+    /* 画像の幅を50%に設定し、高さは自動調整 */
+    width: 30%;
+    height: auto;
+    padding-right: 50px;
+}
+
 /* ヘッダーが fixed のためコンテンツが隠れないよう余白を追加 */
 main {
     /* header の高さに合わせる */
@@ -105,7 +119,7 @@ header {
     display: flex;
 }
 
-.profileText-position {
+.profileText-positionR {
     height: 2000px;
     /* 要素間のスペースを縦に均等に配置 */
     display: flex;
@@ -113,9 +127,8 @@ header {
     justify-content: space-around;
 }
 
-.profileText-position2 {
+.profileText-positionL {
     padding-top: 250px;
-    width: 100%;
     height: 1500px;
     /* 要素間のスペースを縦に均等に配置 */
     display: flex;
@@ -130,6 +143,8 @@ header {
     background-color: rgba(255, 231, 183, 0.543);
     /* 余白を追加 */
     padding: 10px;
+    /* 横幅を500pxに固定 */
+    width: 500px;
 }
 
 .profileText-position-left {
@@ -137,9 +152,18 @@ header {
     background-color: rgba(255, 183, 193, 0.543);
     /* 余白を追加 */
     padding: 10px;
+    /* 横幅を500pxに固定 */
+    width: 500px;
 }
 
-/* フェードインアニメーション用のスタイル */
+.profileText-img-position {
+    display: flex;
+    /* 余白を追加 */
+    padding: 10px;
+}
+
+/* 動的スタイル */
+/* フェードインアニメーション用のスタイル（縦） */
 .fadein {
     /* 最初は透明 */
     opacity: 0;
@@ -154,6 +178,30 @@ header {
     opacity: 1;
     /* 元の位置に戻す */
     transform: translateY(0);
+}
+
+/* 左からスライドイン */
+.slide-in-left {
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.slide-in-left.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* 右からスライドイン */
+.slide-in-right {
+    opacity: 0;
+    transform: translateX(100px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.slide-in-right.show {
+    opacity: 1;
+    transform: translateX(0);
 }
 
 /* ローディング画面のスタイル */
