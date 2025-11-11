@@ -1,27 +1,13 @@
-.img-full {
-    /* 画像の幅を100%に設定し、高さは自動調整 */
-    width: 100%;
-    height: auto;
-}
-
-.img-small {
-    /* 画像の幅を50%に設定し、高さは自動調整 */
-    width: 30%;
-    height: auto;
-    padding-left: 50px;
-}
-
-.img-small2 {
-    /* 画像の幅を50%に設定し、高さは自動調整 */
-    width: 30%;
-    height: auto;
-    padding-right: 50px;
-}
-
+/* 共通スタイル設定 */
 /* ヘッダーが fixed のためコンテンツが隠れないよう余白を追加 */
 main {
     /* header の高さに合わせる */
     padding-top: 100px;
+}
+
+/* 画面全体の背景を設定 */
+body {
+    background-color: #b2ff8c;
 }
 
 .nav-list {
@@ -66,6 +52,54 @@ header {
     z-index: 1000;
 }
 
+.overlay-elements {
+    /* 親要素にrelative */
+    position: relative;
+}
+
+.nuxtButton-position {
+    /* 余白を追加 */
+    padding: 10px;
+    /* 画像の左下に配置 */
+    position: absolute;
+    right: 30px;
+    bottom: 20px;
+    /* 固定する */
+    position: fixed;
+    /* 拡大の基準点 */
+    transition: transform 0.3s ease;
+    transform-origin: center center;
+}
+
+.nuxtButton-position:hover {
+    /* 見た目だけ拡大 */
+    transform: scale(1.2);
+}
+
+
+/* 画像のスタイル設定 */
+.img-full {
+    /* 画像の幅を100%に設定し、高さは自動調整 */
+    width: 100%;
+    height: auto;
+}
+
+.img-small {
+    /* 画像の幅を50%に設定し、高さは自動調整 */
+    width: 30%;
+    height: auto;
+    padding-left: 50px;
+}
+
+.img-small2 {
+    /* 画像の幅を50%に設定し、高さは自動調整 */
+    width: 30%;
+    height: auto;
+    padding-right: 50px;
+}
+
+
+/* トップページのスタイル設定 */
 .caption {
     /* フォントの種類を指定 */
     font-family: 'MS PGothic';
@@ -86,11 +120,8 @@ header {
     line-height: 1.6;
 }
 
-.overlay-elements {
-    /* 親要素にrelative */
-    position: relative;
-}
 
+/* プロフィール画面のスタイル設定 */
 .text-position {
     /* 背景色を設定 */
     background-color: rgba(255, 231, 183, 0.543);
@@ -102,17 +133,6 @@ header {
     position: absolute;
     left: 30px;
     bottom: 70px;
-}
-
-.nuxtButton-position {
-    /* 余白を追加 */
-    padding: 10px;
-    /* 画像の左下に配置 */
-    position: absolute;
-    right: 30px;
-    bottom: 20px;
-    /* 固定する */
-    position: fixed;
 }
 
 .profileText {
@@ -160,6 +180,39 @@ header {
     display: flex;
     /* 余白を追加 */
     padding: 10px;
+}
+
+
+/* 経験業務画面のスタイル設定 */
+.workText {
+    /* 要素間のスペースを横に均等に配置 */
+    display: flex;
+    justify-content: space-between;
+    /* 余白を追加 */
+    padding: 200px;
+    /* 要素が3つで折り返す */
+    flex-wrap: wrap;
+}
+
+.workText-position {
+    /* 表示領域の高さと幅を指定 */
+    width: 350px;
+    height: 350px;
+    background-color: aqua;
+    /* 文字の配置を中央に */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* 余白を追加 */
+    margin-bottom: 30px;
+    /* 拡大の基準点 */
+    transition: transform 0.3s ease;
+    transform-origin: center center;
+}
+
+.workText-position:hover {
+    /* 見た目だけ拡大 */
+    transform: scale(1.2);
 }
 
 /* 動的スタイル */
@@ -269,9 +322,4 @@ header {
 
 .content-text {
     color: #333;
-}
-
-/* 画面全体の背景を設定 */
-body {
-    background-color: #b2ff8c;
 }
