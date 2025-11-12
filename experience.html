@@ -31,12 +31,104 @@
     <main>
         <div>
             <div class="workText">
-                <div class="workText-position">
-                    <p>新しいプラットフォームへの移行に伴う<br>システム再開発</p>
+                <!-- ポップアップ1 -->
+                <input type="checkbox" id="popup">
+                <!-- ポップアップ部分 -->
+                <div id="overlay">
+                    <!-- ウィンドウの外のグレーの領域 -->
+                    <label for="popup" id="bg_gray"></label>
+                    <!-- ウィンドウ部分 -->
+                    <div id="window">
+                        <!-- 閉じるボタン -->
+                        <label for="popup" id="btn_cloth">
+                            <span></span>
+                        </label>
+                        <!-- ウィンドウのコンテンツ -->
+                        <div id="msg">
+                            <h2>データ移行に伴い、Javaで作成されているWebシステムをKotlinで再作成するリライト案件</h2>
+                            <p>＜担当作業＞</p>
+                            <ul>
+                                <li>設計書作成</li>
+                                <li>製造</li>
+                                <li>テスト仕様書作成</li>
+                                <li>テスト実施</li>
+                            </ul>
+                            <p>＜使用ツール＞</p>
+                            <ul>
+                                <li>作業管理：Redmine</li>
+                                <li>ソース管理：Git、GitHub、VisualStudioCode</li>
+                                <li>コミュニケーション：Slack</li>
+                            </ul>
+                            <h3>作業詳細</h3>
+                            <details class="details js-details">
+                                <summary class="details-summary js-details-summary"><span
+                                        class="btn"></span>1つ目のアコーディオンのタイトル</summary>
+                                <div class="details-content js-details-content">
+                                    <p>ここは、1つ目のアコーディオンの中身です。</p>
+                                </div>
+                            </details>
+                            <details class="details js-details">
+                                <summary class="details-summary js-details-summary"><span
+                                        class="btn"></span>2つ目のアコーディオンのタイトル</summary>
+                                <div class="details-content js-details-content">
+                                    <p>ここは、2つ目のアコーディオンの中身です。ここは、2つ目のアコーディオンの中身です。ここは、2つ目のアコーディオンの中身です。ここは、2つ目のアコーディオンの中身です。
+                                    </p>
+                                    <p>ここは、2つ目のアコーディオンの中身です。ここは、2つ目のアコーディオンの中身です。ここは、2つ目のアコーディオンの中身です。<br>
+                                        ここは、2つ目のアコーディオンの中身です。ここは、2つ目のアコーディオンの中身です。
+                                    </p>
+                                </div>
+                            </details>
+                            <details class="details js-details">
+                                <summary class="details-summary js-details-summary"><span
+                                        class="btn"></span>3つ目のアコーディオンのタイトル</summary>
+                                <div class="details-content js-details-content">
+                                    <p>ここは、3つ目のアコーディオンの中身です。ここは、3つ目のアコーディオンの中身です。</p>
+                                    <p>ここは、3つ目のアコーディオンの中身です。</p>
+                                    <p>ここは、3つ目のアコーディオンの中身です。<br>
+                                        ここは、3つ目のアコーディオンの中身です。ここは、3つ目のアコーディオンの中身です。ここは、3つ目のアコーディオンの中身です。ここは、3つ目のアコーディオンの中身です。ここは、3つ目のアコーディオンの中身です。
+                                    </p>
+                                </div>
+                            </details>
+                        </div>
+                    </div>
                 </div>
-                <div class="workText-position">
-                    <p>工業系の業務ツールの改修及びテスト</p>
+                <!-- ページのコンテンツ -->
+                <label for="popup" id="txt_label">
+                    <div class="workText-position">
+                        <p>新しいプラットフォームへの移行に伴う<br>Webシステム再開発<br><br>＜使用言語＞<br>
+                            フロントエンド：HTML、CSS、Javascript<br>フレームワーク：Nuxt.js<br>バックエンド：Kotlin</p>
+                    </div>
+                </label>
+                <!-- ポップアップ2 -->
+                <input type="checkbox" id="popup2">
+                <!-- ポップアップ部分 -->
+                <div id="overlay2">
+                    <!-- ウィンドウの外のグレーの領域 -->
+                    <label for="popup2" id="bg_gray"></label>
+                    <!-- ウィンドウ部分 -->
+                    <div id="window">
+                        <!-- 閉じるボタン -->
+                        <label for="popup2" id="btn_cloth">
+                            <span></span>
+                        </label>
+                        <!-- ウィンドウのコンテンツ -->
+                        <div id="msg">
+                            <h2>初回ご利用の方は、50%OFFクーポン配布中</h2>
+                            <a href="">詳しくはこちらから ></a>
+                            <p>ポップアップの外をクリックしてもウィンドウが閉じます。</p>
+                            <h2>初回ご利用の方は、50%OFFクーポン配布中</h2>
+                            <a href="">詳しくはこちらから ></a>
+                            <p>ポップアップの外をクリックしてもウィンドウが閉じます。</p>
+                        </div>
+                    </div>
                 </div>
+                <!-- ページのコンテンツ -->
+                <label for="popup2" id="txt_label">
+                    <div class="workText-position">
+                        <p>工業系の業務ツールの改修及びテスト</p>
+                    </div>
+                </label>
+                <!-- ポップアップ3 -->
                 <div class="workText-position">
                     <p>リストデータ移行ツール作成</p>
                 </div>
@@ -55,5 +147,6 @@
     </main>
     <script src="js/script.js"></script>
 </body>
+
 
 </html>

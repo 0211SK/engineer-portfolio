@@ -323,3 +323,336 @@ header {
 .content-text {
     color: #333;
 }
+
+/* ポップアップ表示のスタイル設定 */
+input {
+    /* チェックボックスを非表示にする */
+    display: none;
+}
+
+/* ポップアップwindow部分 */
+#overlay {
+    visibility: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 70;
+    width: 100%;
+    height: 100%;
+}
+
+#overlay2 {
+    visibility: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 70;
+    width: 100%;
+    height: 100%;
+}
+
+/* オーバーレイの背景部分 */
+#bg_gray {
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 80;
+}
+
+/* ウィンドウ部分 */
+#window {
+    width: 70%;
+    max-height: 70%;
+    padding: 20px;
+    position: fixed;
+    left: 50%;
+    top: 55%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px -6px rgba(0, 0, 0, 0.6);
+    z-index: 90;
+    opacity: 0;
+}
+
+/* 閉じるボタン */
+#btn_cloth {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #CE5D8B;
+    border-radius: 5px;
+    z-index: 100;
+    cursor: pointer;
+}
+
+#btn_cloth:hover {
+    opacity: 0.7;
+}
+
+#btn_cloth span,
+#btn_cloth span::before {
+    display: block;
+    height: 3px;
+    width: 25px;
+    border-radius: 3px;
+    background: #fff;
+}
+
+#btn_cloth span {
+    transform: rotate(45deg);
+}
+
+#btn_cloth span::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    transform: rotate(-90deg);
+}
+
+/* クリックで表示 */
+#popup:checked~#overlay {
+    visibility: visible;
+}
+
+#popup:checked~#overlay #window {
+    animation: fadein 500ms forwards;
+    animation-timing-function: ease-in-out;
+}
+
+#popup2:checked~#overlay2 {
+    visibility: visible;
+}
+
+#popup2:checked~#overlay2 #window {
+    animation: fadein 500ms forwards;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes fadein {
+    100% {
+        opacity: 1;
+    }
+}
+
+/* コンテンツ部分のスタイル */
+#txt_label {
+    text-decoration: underline;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#txt_label:hover {
+    opacity: 0.7;
+}
+
+#msg a {
+    display: inline-block;
+    color: #fff;
+    background: #CE5D8B;
+    border-radius: 20px;
+    padding: 0.5em 1.5em;
+    text-decoration: none;
+}
+
+#msg a:hover {
+    opacity: 0.7;
+}
+
+.inner {
+    /* 親要素からはみ出ないように設定 */
+    height: 100%;
+    /* 縦スクロールの設定 */
+    overflow-y: scroll;
+}
+
+/* アコーディオンメニューのスタイル設定 */
+.details {
+    border-top: 2px solid #00a5a0;
+    border-left: 2px solid #00a5a0;
+    border-right: 2px solid #00a5a0;
+}
+
+.details:last-of-type {
+    border-bottom: 2px solid #00a5a0;
+}
+
+.details-summary {
+    position: relative;
+    display: block;
+    padding: 20px;
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    background-color: #b2e4e2;
+}
+
+.details-summary:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.details-summary .btn {
+    position: absolute;
+    top: 37%;
+    left: 10%;
+    width: 18px;
+    height: 18px;
+    transform-origin: center center;
+    transition-duration: 0.2s;
+}
+
+.details-summary .btn::before,
+.details-summary .btn::after {
+    content: "";
+    background-color: #fff;
+    border-radius: 10px;
+    width: 18px;
+    height: 4px;
+    position: absolute;
+    top: 7px;
+    left: 0;
+    transform-origin: center center;
+}
+
+.details-summary .btn::before {
+    width: 4px;
+    height: 18px;
+    top: 0;
+    left: 7px;
+}
+
+/* is-active の状態（JSで付与する想定） */
+.details-summary.is-active .btn {
+    -webkit-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+}
+
+.details-summary.is-active .btn::before {
+    content: none;
+}
+
+/* summary のデフォルトマーカーを非表示 */
+.details-summary::-webkit-details-marker {
+    display: none;
+}
+
+.details-content {
+    padding: 20px;
+}
+
+.details-content p {
+    margin: 0 0 20px;
+    color: #000;
+    font-size: 18px;
+    text-align: left;
+}
+
+.details-content p:last-of-type {
+    margin: 0;
+}
+
+/* アコーディオンメニューのスタイル設定 */
+.details {
+    border-top: 2px solid #00a5a0;
+    border-left: 2px solid #00a5a0;
+    border-right: 2px solid #00a5a0;
+}
+
+.details:last-of-type {
+    border-bottom: 2px solid #00a5a0;
+}
+
+.details-summary {
+    position: relative;
+    display: block;
+    padding: 20px;
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    background-color: #b2e4e2;
+}
+
+.details-summary:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+/* ボタン（＋／−） */
+.details-summary .btn {
+    position: absolute;
+    top: 37%;
+    left: 10%;
+    width: 18px;
+    height: 18px;
+    transform-origin: center center;
+    transition: transform 0.2s;
+}
+
+.details-summary .btn::before,
+.details-summary .btn::after {
+    content: "";
+    background-color: #fff;
+    border-radius: 10px;
+    width: 18px;
+    height: 4px;
+    position: absolute;
+    top: 7px;
+    left: 0;
+    transform-origin: center center;
+}
+
+.details-summary .btn::before {
+    width: 4px;
+    height: 18px;
+    top: 0;
+    left: 7px;
+}
+
+/* is-active の状態 */
+.details-summary.is-active .btn {
+    -webkit-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+}
+
+.details-summary.is-active .btn::before {
+    content: none;
+}
+
+/* summary のデフォルトマーカーを非表示 */
+.details-summary::-webkit-details-marker {
+    display: none;
+}
+
+/* アコーディオンの中身（アニメーション対応） */
+.details-content,
+.js-details-content {
+    padding: 0 20px;
+    /* 内側の余白（上下は p で扱う） */
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 300ms ease;
+}
+
+.details-content p,
+.js-details-content p {
+    margin: 0 0 20px;
+    color: #000;
+    font-size: 18px;
+    text-align: left;
+}
+
+.details-content p:last-of-type,
+.js-details-content p:last-of-type {
+    margin: 0;
+}
