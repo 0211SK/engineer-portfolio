@@ -82,6 +82,21 @@ document.addEventListener('DOMContentLoaded', () => {
     const summaries = document.querySelectorAll('.js-details-summary');
     const speedMs = 300; // CSS の transition と合わせる
 
+    // 初期表示で open 属性が付いた details を展開
+    document.addEventListener('DOMContentLoaded', () => {
+        document.querySelectorAll('.js-details').forEach(details => {
+            if (details.hasAttribute('open')) {
+                const summary = details.querySelector('.js-details-summary');
+                const content = details.querySelector('.js-details-content');
+                if (summary) summary.classList.add('is-active');
+                if (content) {
+                    // 中身を展開（アニメーションが不要ならこのまま）
+                    content.style.maxHeight = content.scrollHeight + 'px';
+                }
+            }
+        });
+    });
+
     summaries.forEach(summary => {
         summary.addEventListener('click', function (event) {
             event.preventDefault();
